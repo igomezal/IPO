@@ -1,0 +1,149 @@
+<html>
+
+<head>
+    <title>IPO v1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-4">
+                <h1>¡Bienvenido!</h1></div>
+            <div class="col-lg-4 alumnos">
+                <div class="col-md-8 alumnos">
+                </div>
+                <div class="col-md-4 alumnos">
+                    <a href="profesores/index.html">
+                        <button type="button" class="btn btn-info"> <span class="glyphicon glyphicon-transfer"></span> Profesores </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <a href="#" class="thumbnail presentacion" data-toggle="modal" data-target="#login">
+                        <img src="img/leon.jpg">
+                        <center>Daniel S.</center>
+                    </a>
+                </div>
+                <div class="col-md-3 col-md-offset-1">
+                    <a href="#" class="thumbnail presentacion">
+                        <img src="img/elefante.jpg">
+                        <center>Enrique T.</center>
+                    </a>
+                </div>
+                <div class="col-md-3 col-md-offset-1">
+                    <a href="#" class="thumbnail presentacion">
+                        <img src="img/tigre.jpg">
+                        <center>Jose P.</center>
+                    </a>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-3">
+                    <a href="#" class="thumbnail presentacion">
+                        <img src="img/cerdo.jpg">
+                        <center>Luis P.</center>
+                    </a>
+                </div>
+                <div class="col-md-3 col-md-offset-1">
+                    <a href="#" class="thumbnail presentacion">
+                        <img src="img/jirafa.jpg">
+                        <center>Javier R.</center>
+                    </a>
+                </div>
+                <div class="col-md-3 col-md-offset-1">
+                    <a href="#" class="thumbnail presentacion">
+                        <img src="img/oveja.jpg">
+                        <center>Miriam T.</center>
+                    </a>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-3">
+                    <a href="#" class="thumbnail presentacion">
+                        <img src="img/rana.jpg">
+                        <center>Nuria G.</center>
+                    </a>
+                </div>
+                <div class="col-md-3 col-md-offset-1">
+                    <a href="#" class="thumbnail presentacion">
+                        <img src="img/panda.jpg">
+                        <center>Oscar P.</center>
+                    </a>
+                </div>
+                <div class="col-md-3 col-md-offset-1">
+                    <a href="#" class="thumbnail presentacion">
+                        <img src="img/vaca.jpg">
+                        <center>Miguel N.</center>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bocadillo ayuda">
+        <div class="texto-ayudap">Selecciona tu avatar</div>
+    </div>
+    <img class="ayuda" src="img/ayuda.png" style="position: fixed; bottom: 0px; right: 40px; width:47px; height:80px; cursor:pointer;" alt="" />
+    <!--Modal de Log In-->
+    <div class="modal fade" id="login" role="dialog" aria-labelledby="etiquetaModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <div class="row">
+                        <div class="col-md-3 col-md-offset-4">
+                            <div class="thumbnail">
+                                <img src="img/leon.jpg">
+                                <center>Daniel S.</center>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 col-md-offset-3">
+                            Introduce tu contraseña: <span class="pass"></span>
+                            <br>
+                            <br>
+                            <div type="button" class="btn btn-negro btn-lg contraseñap"></div>
+                            <div type="button" class="btn btn-danger btn-lg contraseña"></div>
+                            <div type="button" class="btn btn-warning btn-lg contraseña"></div>
+                            <br>
+                            <br>
+                            <div type="button" class="btn btn-success btn-lg contraseñap"></div>
+                            <div type="button" class="btn btn-primary btn-lg contraseña"></div>
+                            <div type="button" class="btn btn-amarillo btn-lg contraseña"></div>
+                            <br>
+                            <br>
+                            <div type="button" class="btn btn-morado btn-lg contraseñap"></div>
+                            <div type="button" class="btn btn-rosa btn-lg contraseña"></div>
+                            <div type="button" class="btn btn-default btn-lg contraseña"></div>
+                            <br>
+                            <br>
+                            <center>
+                                <button type="button" class="btn btn-default btn-lg active entrar">Entrar</button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bocadillo ayuda">
+            <div class="texto-ayudap">Introduce tu contraseña</div>
+        </div>
+        <img class="ayuda" src="img/ayuda.png" style="position: fixed; bottom: 0px; right: 40px; width:47px; height:80px; cursor:pointer;" alt="" />
+    </div>
+</body>
+
+</html>

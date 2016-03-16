@@ -1,0 +1,87 @@
+<html>
+
+<head>
+    <title>IPO v1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="css/metisMenu.min.css" rel="stylesheet">
+    <link href="css/sb-admin-2.css" rel="stylesheet">
+    <link href="css/morris.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="css/timeline.css" rel="stylesheet">
+
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/metisMenu.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script type="text/javascript" src="js/morris.min.js"></script>
+    <script type="text/javascript" src="js/sb-admin-2.js"></script>
+    <script type="text/javascript" src="js/graficas_home.js">
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-static-top" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <div class="navbar-brand">El Rincón de Primaria</div>
+            </div>
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav">
+                    &nbsp &nbsp<img src="img/profile.png" /> <span style="font-size:2em; color:#337ab7;">&nbsp Bienvenido</span>
+                    <ul id="side-menu" class="nav in">
+                        <li>
+                            <a class="active" href="home.html"><i class="fa fa-home"></i> Inicio</a>
+                        </li>
+                        <li>
+                            <a href="notificaciones.html"><i class="fa fa-bell-o"></i> Notificaciones</a>
+                        </li>
+                        <li>
+                            <a href="alumnos.html"><i class="fa fa-users"></i> Alumnos</a>
+                        </li>
+                        <li>
+                            <a href="actividades.html"><i class="fa fa-th"></i> Actividades</a>
+                        </li>
+                        <li>
+                            <a href="index.html"><i class="fa fa-sign-out"></i> Salir</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header"> Inicio </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    Resumen de notas por clases
+                    <div id="grafica_linea_simple" style="height: 250px;"></div>
+                </div>
+                <div class="col-md-6">
+                    Información de los ejercicios del último año
+                    <div id="grafica_areas" style="height: 250px;"></div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-6">
+                    Dificultad de los ejercicios totales resueltos
+                    <div id="grafica_donut" style="height: 250px;"></div>
+                </div>
+                <div class="col-md-6">
+                    Puntuacion en los ejercicos por clase
+                    <div id="grafica_barras" style="height: 250px;"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

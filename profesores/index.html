@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <title>IPO v1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4 profesor">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="col-md-12">
+                            <span class="Titulo"> Acceso profesores </span>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <div class="input-group">
+                            <div class="col-md-4">
+                                <span class="formulario"> Usuario: </span>
+                            </div>
+                            <div class="col-md-8">
+                                <input id="user_name" type="text" class="form-control" placeholder="Usuario" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <div class="col-md-4">
+                                <span class="formulario"> Contraseña: </span>
+                            </div>
+                            <div class="col-md-8">
+                                <input id="user_pass" type="password" class="form-control" placeholder="Contraseña" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-md-6">
+                            <button id="enter" type="button" class="btn btn-primary"> Acceder </button>
+                        </div>
+                        <div class="col-md-6 bajonazo">
+                            <input type="checkbox"> Recordarme
+                        </div>
+                        <br>
+                        <br>
+                        <center>
+                            <div id="error"></div>
+                        </center>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 alumnos">
+                <div class="col-md-8 alumnos">
+                </div>
+                <div class="col-md-4 alumnos">
+                    <a href="../index.html">
+                        <button type="button" class="btn btn-info"> <span class="glyphicon glyphicon-transfer"></span> Alumnos </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

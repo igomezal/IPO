@@ -1,0 +1,40 @@
+.profesor {
+    margin-top: 15%;
+}
+
+.formulario {
+    font-size: 18;
+}
+
+.titulo {
+    font-size: 28;
+}
+
+.bajonazo {
+    margin-top: 2%;
+}
+
+.alumnos {
+    margin-top: 3%;
+}
+
+body {
+    background-color: beige;
+}
+
+.thumbnail {
+    height: 147px;
+    background-color: #337ab7;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.close {
+    opacity: 10;
+}
+
+#error {
+    color: firebrick;
+}

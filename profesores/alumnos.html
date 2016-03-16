@@ -1,0 +1,159 @@
+<html>
+
+<head>
+    <title>IPO v1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="css/metisMenu.min.css" rel="stylesheet">
+    <link href="css/sb-admin-2.css" rel="stylesheet">
+    <link href="css/morris.css" rel="stylesheet">
+    <link href="css/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="css/dataTables-responsive.css" rel="styleshet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="css/timeline.css" rel="stylesheet">
+
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/metisMenu.min.js"></script>
+    <script type="text/javascript" src="js/morris.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="js/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/dataTables.responsive.js"></script>
+    <script type="text/javascript" src="js/sb-admin-2.js"></script>
+    <script type="text/javascript" src="js/alumnos.js"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-static-top" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <div class="navbar-brand">El Rincón de Primaria</div>
+            </div>
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav">
+                    &nbsp &nbsp<img src="img/profile.png" /> <span style="font-size:2em; color:#337ab7;">&nbsp Bienvenido</span>
+                    <ul id="side-menu" class="nav in">
+                        <li>
+                            <a href="home.html"><i class="fa fa-home"></i> Inicio</a>
+                        </li>
+                        <li>
+                            <a href="notificaciones.html"><i class="fa fa-bell-o"></i> Notificaciones</a>
+                        </li>
+                        <li>
+                            <a class="active" href="alumnos.html"><i class="fa fa-users"></i> Alumnos</a>
+                        </li>
+                        <li>
+                            <a href="actividades.html"><i class="fa fa-th"></i> Actividades</a>
+                        </li>
+                        <li>
+                            <a href="index.html"><i class="fa fa-sign-out"></i> Salir</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Alumnos</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <div class="row">
+
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="form-inline">
+                                <label>
+                                    Clase:
+                                    <select class="form-control input-sm" id="seleccionar">
+                                        <option value="0">Elige una clase:</option>
+                                        <option value="primeroa">1ºA</option>
+                                        <option value="primerob">1ºB</option>
+                                        <option value="segundoa">2ºA</option>
+                                        <option value="segundob">2ºB</option>
+                                    </select>
+                                    <div class="mostrar-clase" style="display:inline-block"></div>
+                                </label>
+                            </div>
+                            <br>
+                            <div class="contenido">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <h2>Nota media:</h2>
+                                        <div id="myfirstchart" style="height:250px;"></div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <h2>Ejercicios completados:</h2>
+                                        <div id="ejerciciosC" style="height:250px;"></div>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-lg-16"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+    <script>
+        new Morris.Line({
+            // ID of the element in which to draw the chart.
+            element: 'myfirstchart',
+            // Chart data records -- each entry in this array corresponds to a point on
+            // the chart.
+            data: [
+                {
+                    year: '2016 Q1',
+                    value: 6
+                },
+                {
+                    year: '2016 Q2',
+                    value: 8
+                },
+                {
+                    year: '2016 Q3',
+                    value: 7
+                }],
+            // The name of the data record attribute that contains x-values.
+            xkey: 'year',
+
+            // A list of names of data record attributes that contain y-values.
+            ykeys: ['value'],
+            // Labels for the ykeys -- will be displayed when you hover over the
+            // chart.
+            labels: ['Nota media']
+        });
+        Morris.Donut({
+            element: 'ejerciciosC',
+            data: [
+                {
+                    label: "Ejercicios Completados",
+                    value: 12
+                },
+                {
+                    label: "Ejercicios no Completados",
+                    value: 30
+                }
+  ]
+        });
+    </script>
+</body>
+
+</html>
