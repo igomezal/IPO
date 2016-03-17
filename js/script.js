@@ -3,7 +3,7 @@ $(document).ready(function () {
     var contraseña = '';
     $('.presentacion').click(function () {
         console.log('pulsado');
-        $('.texto-ayudap2').html('Selecciona tu avatar');
+        $('.texto-ayudap2').html('Introduce tu contraseña');
     });
     $('.ayuda').click(function () {
         $('.bocadillo').toggleClass('esconder');
