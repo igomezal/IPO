@@ -64,7 +64,7 @@ $(document).ready(function () {
         if (contraseña === 'rojoazulnaranjarojo') {
             window.open('temas.html', '_self');
         } else {
-            $('.texto-ayudap').html('Contraseña incorrecta');
+            $('.texto-ayudap2').html('Contraseña incorrecta');
             $('.bocadillo').removeClass('esconder');
         }
     });
