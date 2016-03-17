@@ -56,7 +56,6 @@ $(document).ready(function () {
     $('body').click(function () {
         if (!($('body').hasClass('modal-open'))) {
             $('.pass').html('');
-            $('.texto-ayudap2').html('Selecciona tu avatar');
             contraseña = '';
             tamaño = 0;
         }
@@ -65,7 +64,7 @@ $(document).ready(function () {
         if (contraseña === 'rojoazulnaranjarojo') {
             window.open('temas.html', '_self');
         } else {
-            $('.texto-ayudap').html('Contraseña incorrecta');
+            $('.texto-ayudap2').html('Contraseña incorrecta');
             $('.bocadillo').removeClass('esconder');
         }
     });
