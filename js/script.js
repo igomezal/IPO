@@ -56,7 +56,6 @@ $(document).ready(function () {
     $('body').click(function () {
         if (!($('body').hasClass('modal-open'))) {
             $('.pass').html('');
-            $('.texto-ayudap2').html('Selecciona tu avatar');
             contraseña = '';
             tamaño = 0;
         }
