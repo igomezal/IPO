@@ -3,7 +3,7 @@ $(document).ready(function () {
     var contraseña = '';
     $('.presentacion').click(function () {
         console.log('pulsado');
-        $('.texto-ayuda').html('Introduce tu contraseña');
+        $('.texto-ayudap2').html('Selecciona tu avatar');
     });
     $('.ayuda').click(function () {
         $('.bocadillo').toggleClass('esconder');
@@ -49,14 +49,14 @@ $(document).ready(function () {
     });
     $('button[data-dismiss=modal]').click(function () {
         $('.pass').html('');
-        $('.texto-ayuda').html('Selecciona tu avatar');
+        $('.texto-ayudap2').html('Selecciona tu avatar');
         contraseña = '';
         tamaño = 0;
     });
     $('body').click(function () {
         if (!($('body').hasClass('modal-open'))) {
             $('.pass').html('');
-
+            $('.texto-ayudap2').html('Selecciona tu avatar');
             contraseña = '';
             tamaño = 0;
         }
