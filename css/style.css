@@ -6,12 +6,20 @@ h1 {
     color: white;
 }
 
+.perfil {
+    border: 2px solid white;
+    background-color: f8d514;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+
 .thumbnail {
     height: 147px;
     background-color: 2dbbbd;
     color: white;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 29px;
     font-weight: 200;
 }
 
@@ -134,4 +142,8 @@ h1 {
 
 .alumnos {
     margin-top: 3%;
+}
+
+.letras {
+    margin-top: 20px;
 }

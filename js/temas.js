@@ -8,24 +8,25 @@ $(document).ready(function(){
        var id = $(this).attr('id'); 
         console.log(id);
         if(id==cuenta){
-            $('.texto-ayuda').html('¡Muy bien sigue asi!');
             $(this).remove();
             if(cuenta==1){
-                $('.respuesta').html('Hi_op_ta_o ');
+                $('.respuesta').html('El <span style="color: blue">hi_op_ta_o</span> vive en África<span></span>');
+                $('.feedback').html('<div class="acierto"<center><h1>¡Muy bien!</h1><center>');
             }else if(cuenta==2){
-                $('.respuesta').html('Hipop_ta_o ');
+                $('.respuesta').html('El <span style="color: blue">hipop_ta_o</span> vive en África<span></span>');
             }else if(cuenta==3){
-                $('.respuesta').html('Hipopóta_o ');
+                $('.respuesta').html('El <span style="color: blue">hipopóta_o</span> vive en África<span></span>');
             }else if(cuenta==4){
-                $('.respuesta').html('Hipopótamo ');
-                $('.letras').html('<img src="img/logo-fantastico.png"/>');
+                $('.respuesta').html('El <span style="color: blue">hipopótamo</span> vive en África<span></span>');
+                $('.fantastico').html('<center><img src="img/star.png" style="width: 40px; height: 40px;"> <img src="img/star.png" style="width: 40px; height: 40px;"> <img src="img/star_fallo.png" style="width: 40px; height: 40px;"><br><br><img src="img/logo-fantastico.png" style="width: 500px; height: 150px;"/><br><br><a type="button" href="index.html" class="btn btn-primary btn-lg glyphicon glyphicon-home"> Inicio</a>&nbsp &nbsp &nbsp<a type="button" href="actividad.html" class="btn btn-warning btn-lg glyphicon glyphicon-repeat"> Reiniciar</a></center>');
             }
             cuenta++;
         }else{
-            $('.texto-ayuda').html('¡Sigue intentandolo!');
-            $('.letras').html('<button type="button" class="btn btn-primary btn-lg ejercicio" id="2">P</button> <button type="button" class="btn btn-primary btn-lg ejercicio" id="1">H</button> <button type="button" class="btn btn-primary btn-lg ejercicio" id="4">M</button> <button type="button" class="btn btn-primary btn-lg ejercicio" id="3">Ó</button>');
-            cuenta = 1;
-            $('.respuesta').html('_i_op_ta_o ');
+            $('#myError').modal('show');
+            
         }
+    });
+    $('#continuar').click(function(){
+        $('#myError').modal('hide');
     });
 });
