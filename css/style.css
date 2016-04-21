@@ -6,12 +6,20 @@ h1 {
     color: white;
 }
 
+.perfil {
+    border: 2px solid white;
+    background-color: f8d514;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+
 .thumbnail {
     height: 147px;
     background-color: 2dbbbd;
     color: white;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 29px;
     font-weight: 200;
 }
 
@@ -100,30 +108,24 @@ h1 {
 
 .bocadillo {
     position: fixed;
-    bottom: 90px;
-    right: 25px;
+    bottom: 160px;
+    right: 150px;
     width: 200px;
     height: 100px;
     background-image: url(../img/bocadillo1.png);
     cursor: pointer;
 }
 
-.texto-ayuda {
-    position: fixed;
-    bottom: 140px;
-    right: 55px;
-}
-
 .texto-ayudap {
     position: fixed;
-    bottom: 140px;
-    right: 55px;
+    bottom: 210px;
+    right: 200px;
 }
 
 .texto-ayudap2 {
     position: fixed;
-    bottom: 140px;
-    right: 55px;
+    bottom: 210px;
+    right: 180px;
 }
 
 .esconder {
@@ -140,4 +142,31 @@ h1 {
 
 .contraseña_erronea {
     color: firebrick;
+}
+
+.letras {
+    margin-top: 20px;
+}
+
+.awesome {
+    width: 500px;
+    height: 150px;
+}
+
+.enunciado {
+    background-color: lightblue;
+    border-radius: 5px;
+    width: 750px;
+}
+
+.enunciado h1 {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 40px;
+    color: black;
+}
+
+.enunciado p {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 35px;
+    color: midnightblue;
 }
