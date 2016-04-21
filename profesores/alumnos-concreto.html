@@ -12,7 +12,6 @@
     <link href="css/dataTables.bootstrap.css" rel="stylesheet">
     <link href="css/dataTables-responsive.css" rel="styleshet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
 
     <link href="css/timeline.css" rel="stylesheet">
 
@@ -25,6 +24,7 @@
     <script type="text/javascript" src="js/dataTables.bootstrap.min.js"></script>
     <script type="text/javascript" src="js/dataTables.responsive.js"></script>
     <script type="text/javascript" src="js/sb-admin-2.js"></script>
+    <script type="text/javascript" src="js/alumnos.js"></script>
 </head>
 
 <body>
@@ -65,63 +65,43 @@
                 <!-- /.col-lg-12 -->
             </div>
             <div class="row">
-                <div class="col-lg-12">
-                    <a href="alumnos-clase.html"><img src="../img/back.png"></a>
-                    <br>
-                    <br>
-                    <ol class="breadcrumb">
-                        <li><a href="alumnos.html">Alumnos</a></li>
-                        <li><a href="alumnos-clase.html">1ºA</a></li>
-                        <li class="active">Daniel S.</li>
-                    </ol>
-                </div>
+
             </div>
             <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <div class="thumbnail thumbnailv2 usuario">
-                                        <img src="../img/leon.jpg">
+                            <div class="form-inline">
+                                <label>
+                                    Clase:
+                                    <select class="form-control input-sm" id="seleccionar">
+                                        <option value="0">Elige una clase:</option>
+                                        <option value="primeroa">1ºA</option>
+                                        <option value="primerob">1ºB</option>
+                                        <option value="segundob">1ºC</option>
+                                        <option value="segundoa">2ºA</option>
+                                        <option value="segundob">2ºB</option>
+                                        <option value="segundob">2ºC</option>
+                                    </select>
+                                    <div class="mostrar-clase" style="display:inline-block"></div>
+                                </label>
+                            </div>
+                            <br>
+                            <div class="contenido">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <h2>Nota media:</h2>
+                                        <div id="myfirstchart" style="height:250px;"></div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <h2>Ejercicios completados:</h2>
+                                        <div id="ejerciciosC" style="height:250px;"></div>
                                     </div>
                                 </div>
-                                <div class="col-lg-8">
-                                    <h1>Daniel S.</h1>
-                                    <ul>
-                                        <li>Curso: 1ºA</li>
-                                        <li>Número: 7</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <h3>Nota Media</h3>
-                                    <div id="grafico"></div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <h3>Ejercicios Completados</h3>
-                                    <div id="ejerciciosC"></div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="dataTable_wrapper">
-                                        <table width="100%" class="table table-striped table-bordered table-hover">
-                                            <tbody>
-                                                <tr>
-                                                    <td>Daniel S. ha terminado la tarea rellenar huecos del temario los animales</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Daniel S. ha terminado los ejercicios del primer trimestre</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Daniel S. ha terminado la tarea puzzles del temario el Sistema Solar</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-lg-16"></div>
                                 </div>
                             </div>
                         </div>
@@ -135,61 +115,39 @@
         <!-- /#page-wrapper -->
     </div>
     <script>
-        Morris.Bar({
-            element: 'grafico',
+        new Morris.Line({
+            // ID of the element in which to draw the chart.
+            element: 'myfirstchart', // Chart data records -- each entry in this array corresponds to a point on
+            // the chart.
             data: [
                 {
-                    y: 'Los animales',
-                    a: 6
-                },
-                {
-                    y: 'Anatomía',
-                    a: 7
-                },
-                {
-                    y: 'Geografía',
-                    a: 8
-                },
-                {
-                    y: 'Naturaleza',
-                    a: 7
-                },
-                {
-                    y: 'Reciclaje',
-                    a: 5
-                },
-                {
-                    y: 'Alimentación',
-                    a: 7
-                },
-                {
-                    y: 'Sistema Solar',
-                    a: 10
-                },
-                {
-                    y: 'Vida en Sociedad',
-                    a: 5
-                },
-                {
-                    y: 'Transpotes',
-                    a: 6
+                    year: '2016 Q1',
+                    value: 6
                 }
-  ],
-            xkey: 'y',
-            ykeys: ['a'],
-            labels: ['Nota Media']
+                , {
+                    year: '2016 Q2',
+                    value: 8
+                }
+                , {
+                    year: '2016 Q3',
+                    value: 7
+                }], // The name of the data record attribute that contains x-values.
+            xkey: 'year',
+            // A list of names of data record attributes that contain y-values.
+            ykeys: ['value'], // Labels for the ykeys -- will be displayed when you hover over the
+            // chart.
+            labels: ['Nota media']
         });
-
         Morris.Donut({
             element: 'ejerciciosC',
             data: [
                 {
-                    label: "Ejercicio Completados",
-                    value: 5
-                },
-                {
+                    label: "Ejercicios Completados",
+                    value: 12
+                }
+                , {
                     label: "Ejercicios no Completados",
-                    value: 18
+                    value: 30
                 }
   ]
         });

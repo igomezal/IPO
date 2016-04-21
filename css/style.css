@@ -119,11 +119,13 @@ h1 {
     bottom: 140px;
     right: 55px;
 }
+
 .texto-ayudap2 {
     position: fixed;
     bottom: 140px;
     right: 55px;
 }
+
 .esconder {
     display: none;
 }
@@ -134,4 +136,8 @@ h1 {
 
 .alumnos {
     margin-top: 3%;
+}
+
+.contraseña_erronea {
+    color: firebrick;
 }

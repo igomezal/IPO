@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>IPO v1</title>
+    <title>IPO v3</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <link href="css/bootstrap.css" rel="stylesheet" />
@@ -9,12 +9,42 @@
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <script type="text/javascript" src="js/temas.js"></script>
+    <script type="text/javascript" src="js/fondo.js"></script>
 </head>
 
 <body>
     <div class="container">
         <div class="container-fluid">
-            <h1>Temas</h1>
+            <div class="row">
+                <div class="col-md-7">
+                    <h1>Temas</h1>
+                </div>
+                <div class="col-md-5">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <a href="#" data-toggle="modal" data-target="#ajustes">
+                                <button class="glyphicon glyphicon-cog btn" style="margin-top:30px;"></button>
+                            </a>
+                        </div>
+                        <div class="col-md-10">
+                            <div class="row perfil">
+                                <div class="col-md-3 col-xs-2 col-sm-2">
+                                    <img class="img-responsive" style="margin-top: 10px; margin-bottom: 10px;" src="img/leon.jpg"> </div>
+                                <div class="col-md-5 col-xs-7 col-sm-7">
+                                    <p style="margin-top: 30px; color: white; font-size: 17px">1ºA - Daniel S.</p>
+                                </div>
+                                <div class="col-md-4 col-xs-7 col-sm-7">
+                                    <a type="button" href="index.html" class="btn btn-danger btn-lg" style="margin-top: 10px; margin-bottom: 15px;">
+                                Salir <span><img src="img/exit.png" style="width:30px; height:33px;"></span>
+                            </a> </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <!--Cabecera-->
             <div class="row">
                 <div class="col-md-3">
                     <a href="animales.html" class="thumbnail presentacion">
@@ -35,15 +65,7 @@
                     </a>
                 </div>
                 <div class="col-md-3">
-                    <a href="#" class="thumbnail usuario">
-                        <img src="img/leon.jpg">
-                        <center>Daniel S.</center>
-                    </a>
-                    <center>
-                        <a href="index.html">
-                            <button type="button" class="btn btn-danger btn-lg">Salir</button>
-                        </a>
-                    </center>
+
                 </div>
             </div>
             <div class="row">
@@ -93,6 +115,78 @@
         <div class="texto-ayudap">Selecciona un tema</div>
     </div>
     <img class="ayuda" src="img/ayuda.png" style="position: fixed; bottom: 0px; right: 40px; width:47px; height:80px; cursor:pointer;" alt="" />
+
+    <!--Modal de Ajustes-->
+    <div class="modal fade" id="ajustes" role="dialog" aria-labelledby="etiquetaModal">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" style="font-size:200%">&times;</button>
+                    <h4 class="modal-title">Opciones</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h4>Fondo:</h4>
+                        </div>
+                        <div class="col-md-9">
+                            <center>
+                                <button class="btn btn-success active background-color-green" style="min-height:34px; min-width:40px;" title="cambiar color de fondo a verde"></button>
+                                <button class="btn btn-primary background-color-blue" style="min-height:34px; min-width:40px;" title="Cambiar color de fondo a azul"></button>
+                                <button class="btn btn-warning background-color-orange" style="min-height:34px; min-width:40px;" title="Cambiar color de fondo a naranja"></button>
+                            </center>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h4>Volumen:</h4>
+                        </div>
+                        <div class="col-md-9">
+                            <center>
+                                <button class="glyphicon glyphicon-volume-off btn btn-success active" disabled="disabled" title="Apagar los sonidos"></button>
+                                <button class="glyphicon glyphicon-volume-down btn btn-default" disabled="disabled" title="Bajar volumen"></button>
+                                <button class="glyphicon glyphicon-volume-up btn btn-default" disabled="disabled" title="Subir volumen"></button>
+                            </center>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h4>Idioma:</h4>
+                        </div>
+                        <div class="col-md-9">
+                            <center>
+                                <button class="btn btn-default" disabled="disabled" title="Inglés"><img class="img-responsive" src="img/ingles.png"></button>
+                                <button class="btn btn-success active" disabled="disabled" title="Castellano"><img class="img-responsive" src="img/espa%C3%B1ol.png"></button>
+                            </center>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h4>Letra:</h4>
+                        </div>
+                        <div class="col-md-9">
+                            <center>
+                                <button class="glyphicon glyphicon-zoom-out btn btn-default" disabled="disabled" title="Disminuir tamaño de la letra"></button>
+                                <button class="glyphicon glyphicon-zoom-in btn btn-default" disabled="disabled" title="Aumentar tamaño de la letra"></button>
+                            </center>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h4>Voz:</h4>
+                        </div>
+                        <div class="col-md-9">
+                            <center>
+                                <button class="glyphicon glyphicon-bullhorn btn btn-default" disabled="disabled" title="Activar lector web"></button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal de ajustes -->
 </body>
 
 </html>
