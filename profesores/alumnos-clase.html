@@ -14,7 +14,7 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
 
     <link href="css/timeline.css" rel="stylesheet">
-
+    
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript" src="../js/bootstrap.js"></script>
     <script type="text/javascript" src="js/metisMenu.min.js"></script>
@@ -24,6 +24,20 @@
     <script type="text/javascript" src="js/dataTables.bootstrap.min.js"></script>
     <script type="text/javascript" src="js/dataTables.responsive.js"></script>
     <script type="text/javascript" src="js/sb-admin-2.js"></script>
+    <script type="text/javascript">
+        var rem = function(){
+            $('.not').html('<div id="noti" class="alert alert-danger" role="alert"> Alumno eliminado </div>');
+            setTimeout(function() {
+                $("#noti").fadeOut(1500);
+            },5000);
+        }
+        var add = function(){
+            $('.not').html('<div id="noti" class="alert alert-success" role="alert"> Cambios realizados con éxito </div>');
+            setTimeout(function() {
+                $("#noti").fadeOut(1500);
+            },5000);
+        }
+    </script>
 </head>
 
 <body>
@@ -49,6 +63,9 @@
                             <a href="actividades.html"><i class="fa fa-th"></i> Actividades</a>
                         </li>
                         <li>
+                            <a href="ajustes.html"><i class="fa fa-cogs"></i> Ajustes </a>
+                        </li>
+                        <li>
                             <a href="index.html"><i class="fa fa-sign-out"></i> Salir</a>
                         </li>
                     </ul>
@@ -71,6 +88,7 @@
                         <li><a href="alumnos.html">Alumnos</a></li>
                         <li class="active">1ºA</li>
                     </ol>
+                    <div class="not"></div>
                 </div>
             </div>
             <div class="row">
@@ -88,56 +106,157 @@
                                                         <th aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style="width: 193px;" colspan="1" rowspan="1" aria-controls="dataTables-example" tabindex="0" class="sorting_asc">Número</th>
                                                         <th aria-label="Browser: activate to sort column ascending" style="width: 232px;" colspan="1" rowspan="1" aria-controls="dataTables-example" tabindex="0" class="sorting">Nombre</th>
                                                         <th aria-label="Platform(s): activate to sort column ascending" style="width: 211px;" colspan="1" rowspan="1" aria-controls="dataTables-example" tabindex="0" class="sorting">Apellidos</th>
+                                                        <th style="width: 50px" colspan="1" rowspan="1" tabindex="0"> Opciones </th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr role="row" class="gradeA odd">
                                                         <td class="sorting_1">1</td>
                                                         <td>Nuria</td>
-                                                        <td>G.</td>
+                                                        <td>Gómez Alonso</td>
+                                                        <td><center><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></button>&nbsp &nbsp<button type="button" class="btn btn-default" data-toggle="modal" data-target=""><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>&nbsp &nbsp<button type="button" class="btn btn-default" data-toggle="modal" data-target=""><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></center></td>
                                                     </tr>
                                                     <tr role="row" class="gradeA even">
                                                         <td class="sorting_1">2</td>
                                                         <td>Miguel</td>
-                                                        <td>N.</td>
+                                                        <td>Nuñez Sanz</td>
+                                                        <td><center><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></button>&nbsp &nbsp<button type="button" class="btn btn-default" data-toggle="modal" data-target=""><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>&nbsp &nbsp<button type="button" class="btn btn-default" data-toggle="modal" data-target=""><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></center></td>
                                                     </tr>
                                                     <tr role="row" class="gradeA odd">
                                                         <td class="sorting_1">3</td>
                                                         <td>Luis</td>
-                                                        <td>P.</td>
+                                                        <td>Pérez Reverte</td>
+                                                        <td><center><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></button>&nbsp &nbsp<button type="button" class="btn btn-default" data-toggle="modal" data-target=""><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>&nbsp &nbsp<button type="button" class="btn btn-default" data-toggle="modal" data-target=""><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></center></td>
                                                     </tr>
                                                     <tr role="row" class="gradeA even">
                                                         <td class="sorting_1">4</td>
                                                         <td>Jose</td>
-                                                        <td>P.</td>
+                                                        <td>Pavón Alvarado</td>
+                                                        <td><center><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></button>&nbsp &nbsp<button type="button" class="btn btn-default" data-toggle="modal" data-target=""><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>&nbsp &nbsp<button type="button" class="btn btn-default" data-toggle="modal" data-target=""><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></center></td>
                                                     </tr>
                                                     <tr role="row" class="gradeA odd">
                                                         <td class="sorting_1">5</td>
                                                         <td>Oscar</td>
-                                                        <td>P.</td>
+                                                        <td>Pinilla Cruz</td>
+                                                        <td><center><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></button>&nbsp &nbsp<button type="button" class="btn btn-default" data-toggle="modal" data-target=""><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>&nbsp &nbsp<button type="button" class="btn btn-default" data-toggle="modal" data-target=""><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></center></td>
                                                     </tr>
                                                     <tr role="row" class="gradeA even">
                                                         <td class="sorting_1">6</td>
                                                         <td>Javier</td>
-                                                        <td>R.</td>
+                                                        <td>Rodriguez Álvarez</td>
+                                                        <td><center><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></button>&nbsp &nbsp<button type="button" class="btn btn-default" data-toggle="modal" data-target=""><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>&nbsp &nbsp<button type="button" class="btn btn-default" data-toggle="modal" data-target=""><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></center></td>
                                                     </tr>
-                                                    <tr role="row" class="gradeA odd" onclick="document.location='alumnos-concreto.html'">
+                                                    <tr role="row" class="gradeA odd">
                                                         <td class="sorting_1">7</td>
                                                         <td>Daniel</td>
-                                                        <td>S.</td>
+                                                        <td>Serrano Barbero</td>
+                                                        <td><center><a href="alumnos-concreto.html"><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></button></a>&nbsp &nbsp<button type="button" class="btn btn-default" data-toggle="modal" data-target="#editar"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>&nbsp &nbsp<button type="button" class="btn btn-default" data-toggle="modal" data-target="#eliminar"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></center></td>
                                                     </tr>
                                                     <tr role="row" class="gradeA even">
                                                         <td class="sorting_1">8</td>
                                                         <td>Miriam</td>
-                                                        <td>T.</td>
+                                                        <td>Solis Carbonero</td>
+                                                        <td><center><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></button>&nbsp &nbsp<button type="button" class="btn btn-default" data-toggle="modal" data-target=""><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>&nbsp &nbsp<button type="button" class="btn btn-default" data-toggle="modal" data-target=""><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></center></td>
                                                     </tr>
                                                     <tr role="row" class="gradeA odd">
                                                         <td class="sorting_1">9</td>
                                                         <td>Enrique</td>
-                                                        <td>T.</td>
+                                                        <td>Torres García</td>
+                                                        <td><center><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></button>&nbsp &nbsp<button type="button" class="btn btn-default" data-toggle="modal" data-target=""><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>&nbsp &nbsp<button type="button" class="btn btn-default" data-toggle="modal" data-target=""><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></center></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
+                                            <!-- Modal editar -->
+                                            <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                            <h4 class="modal-title" id="myModalLabel"> Editar alumno </h4>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <div class="input-group">
+                                                                        <span class="input-group-addon" id="basic-addon1"> Nombre </span>
+                                                                        <input type="text" class="form-control" placeholder=Daniel aria-describedby="basic-addon1">
+                                                                    </div>
+                                                                    <br>
+                                                                    <br>
+                                                                    <div class="input-group">
+                                                                        <span class="input-group-addon" id="basic-addon1"> Curso &nbsp &nbsp </span>
+                                                                        <input type="text" class="form-control" placeholder="1º" aria-describedby="basic-addon1">
+                                                                    </div>
+                                                                    <br>
+                                                                    <br>
+                                                                    <div class="input-group">
+                                                                        <span class="input-group-addon" id="basic-addon1"> Edad &nbsp &nbsp &nbsp </span>
+                                                                        <input type="text" class="form-control" placeholder="6 años" aria-describedby="basic-addon1">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="input-group">
+                                                                        <span class="input-group-addon" id="basic-addon1"> Apellidos &nbsp </span>
+                                                                        <input type="text" class="form-control" placeholder="Serrano Barbero" aria-describedby="basic-addon1">
+                                                                    </div>
+                                                                    <br>
+                                                                    <br>
+                                                                    <div class="input-group">
+                                                                        <span class="input-group-addon" id="basic-addon1"> Clase &nbsp &nbsp &nbsp &nbsp </span>
+                                                                        <input type="textArea" class="form-control" placeholder="A" aria-describedby="basic-addon1">
+                                                                    </div>
+                                                                    <br>
+                                                                    <br>
+                                                                    <div class="input-group">
+                                                                        <span class="input-group-addon" id="basic-addon1"> Expediente </span>
+                                                                        <input type="text" class="form-control" placeholder="5894" aria-describedby="basic-addon1">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#seguro" data-dismiss="modal"> Aceptar </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Modal eliminar -->
+                                            <div class="modal fade" id="eliminar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                            <h4 class="modal-title" id="myModalLabel"> Eliminar alumno </h4>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <center>
+                                                                <h4> ¿Estás seguro de eliminarlo? </h4>
+                                                            </center>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="rem()">Aceptar</button>
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Modal seguro -->
+                                            <div class="modal fade" id="seguro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-body">
+                                                            <center>
+                                                                <h4> ¿Estás seguro de modificarlo? </h4>
+                                                            </center>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-success" data-dismiss="modal" onclick="add()">Si</button>
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
