@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>IPO v1</title>
+    <title>El Rincón de Primaria</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
 
@@ -31,8 +31,14 @@
                 $("#noti").fadeOut(1500);
             },5000);
         }
-        var add = function(){
+        var chan = function(){
             $('.not').html('<div id="noti" class="alert alert-success" role="alert"> Cambios realizados con éxito </div>');
+            setTimeout(function() {
+                $("#noti").fadeOut(1500);
+            },5000);
+        }
+        var add = function(){
+            $('.not').html('<div id="noti" class="alert alert-success" role="alert"> Alumno añadido con éxito </div>');
             setTimeout(function() {
                 $("#noti").fadeOut(1500);
             },5000);
@@ -60,13 +66,13 @@
                             <a class="active" href="alumnos.html"><i class="fa fa-users"></i> Alumnos</a>
                         </li>
                         <li>
-                            <a href="actividades.html"><i class="fa fa-th"></i> Actividades</a>
+                            <a href="temas.html"><i class="fa fa-th"></i> Actividades</a>
                         </li>
                         <li>
                             <a href="ajustes.html"><i class="fa fa-cogs"></i> Ajustes </a>
                         </li>
                         <li>
-                            <a href="index.html"><i class="fa fa-sign-out"></i> Salir</a>
+                            <a href="index.html"><i class="fa fa-sign-out"></i> Cerrar sesión </a>
                         </li>
                     </ul>
                 </div>
@@ -166,6 +172,7 @@
                                                     </tr>
                                                 </tbody>
                                             </table>
+                                            <center><button type="button" class="btn btn-default" data-toggle="modal" data-target="#añadir"> Añadir nuevo alumno </button></center>
                                             <!-- Modal editar -->
                                             <div class="modal fade" id="editar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                                 <div class="modal-dialog" role="document">
@@ -221,6 +228,61 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <!-- Modal añadir -->
+                                            <div class="modal fade" id="añadir" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                            <h4 class="modal-title" id="myModalLabel"> Añadir alumno </h4>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <div class="input-group">
+                                                                        <span class="input-group-addon" id="basic-addon1"> Nombre </span>
+                                                                        <input type="text" class="form-control" aria-describedby="basic-addon1">
+                                                                    </div>
+                                                                    <br>
+                                                                    <br>
+                                                                    <div class="input-group">
+                                                                        <span class="input-group-addon" id="basic-addon1"> Curso &nbsp &nbsp </span>
+                                                                        <input type="text" class="form-control" aria-describedby="basic-addon1">
+                                                                    </div>
+                                                                    <br>
+                                                                    <br>
+                                                                    <div class="input-group">
+                                                                        <span class="input-group-addon" id="basic-addon1"> Edad &nbsp &nbsp &nbsp </span>
+                                                                        <input type="text" class="form-control" aria-describedby="basic-addon1">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="input-group">
+                                                                        <span class="input-group-addon" id="basic-addon1"> Apellidos &nbsp </span>
+                                                                        <input type="text" class="form-control" aria-describedby="basic-addon1">
+                                                                    </div>
+                                                                    <br>
+                                                                    <br>
+                                                                    <div class="input-group">
+                                                                        <span class="input-group-addon" id="basic-addon1"> Clase &nbsp &nbsp &nbsp &nbsp </span>
+                                                                        <input type="textArea" class="form-control" aria-describedby="basic-addon1">
+                                                                    </div>
+                                                                    <br>
+                                                                    <br>
+                                                                    <div class="input-group">
+                                                                        <span class="input-group-addon" id="basic-addon1"> Expediente </span>
+                                                                        <input type="text" class="form-control" aria-describedby="basic-addon1">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#aceptar" data-dismiss="modal">Aceptar</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <!-- Modal eliminar -->
                                             <div class="modal fade" id="eliminar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                                 <div class="modal-dialog" role="document">
@@ -235,13 +297,13 @@
                                                             </center>
                                                         </div>
                                                         <div class="modal-footer">
-                                                            <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="rem()">Aceptar</button>
                                                             <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                                            <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="rem()">Aceptar</button>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- Modal seguro -->
+                                            <!-- Modal seguro 1 -->
                                             <div class="modal fade" id="seguro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                                 <div class="modal-dialog" role="document">
                                                     <div class="modal-content">
@@ -251,8 +313,24 @@
                                                             </center>
                                                         </div>
                                                         <div class="modal-footer">
-                                                            <button type="button" class="btn btn-success" data-dismiss="modal" onclick="add()">Si</button>
                                                             <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                                                            <button type="button" class="btn btn-success" data-dismiss="modal" onclick="chan()">Si</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Modal seguro 2 -->
+                                            <div class="modal fade" id="aceptar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-body">
+                                                            <center>
+                                                                <h4> ¿Estás seguro de añadirlo? </h4>
+                                                            </center>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                                                            <button type="button" class="btn btn-success" data-dismiss="modal" onclick="add()">Si</button>
                                                         </div>
                                                     </div>
                                                 </div>
