@@ -47,10 +47,13 @@
                             <a class="active" href="alumnos.html"><i class="fa fa-users"></i> Alumnos</a>
                         </li>
                         <li>
-                            <a href="actividades.html"><i class="fa fa-th"></i> Actividades</a>
+                            <a href="temas.html"><i class="fa fa-th"></i> Actividades</a>
                         </li>
                         <li>
-                            <a href="index.html"><i class="fa fa-sign-out"></i> Salir</a>
+                            <a href="ajustes.html"><i class="fa fa-cogs"></i> Ajustes </a>
+                        </li>
+                        <li>
+                            <a href="index.html"><i class="fa fa-sign-out"></i> Cerrar sesión </a>
                         </li>
                     </ul>
                 </div>
@@ -136,60 +139,60 @@
     </div>
     <script>
         Morris.Bar({
-            element: 'grafico',
-            data: [
+            element: 'grafico'
+            , data: [
                 {
-                    y: 'Los animales',
-                    a: 6
-                },
-                {
-                    y: 'Anatomía',
-                    a: 7
-                },
-                {
-                    y: 'Geografía',
-                    a: 8
-                },
-                {
-                    y: 'Naturaleza',
-                    a: 7
-                },
-                {
-                    y: 'Reciclaje',
-                    a: 5
-                },
-                {
-                    y: 'Alimentación',
-                    a: 7
-                },
-                {
-                    y: 'Sistema Solar',
-                    a: 10
-                },
-                {
-                    y: 'Vida en Sociedad',
-                    a: 5
-                },
-                {
-                    y: 'Transpotes',
-                    a: 6
+                    y: 'Los animales'
+                    , a: 6
                 }
-  ],
-            xkey: 'y',
-            ykeys: ['a'],
-            labels: ['Nota Media']
+                , {
+                    y: 'Anatomía'
+                    , a: 7
+                }
+                , {
+                    y: 'Geografía'
+                    , a: 8
+                }
+                , {
+                    y: 'Naturaleza'
+                    , a: 7
+                }
+                , {
+                    y: 'Reciclaje'
+                    , a: 5
+                }
+                , {
+                    y: 'Alimentación'
+                    , a: 7
+                }
+                , {
+                    y: 'Sistema Solar'
+                    , a: 10
+                }
+                , {
+                    y: 'Vida en Sociedad'
+                    , a: 5
+                }
+                , {
+                    y: 'Transpotes'
+                    , a: 6
+                }
+  ]
+            , xkey: 'y'
+            , ykeys: ['a']
+            , labels: ['Nota Media']
         });
 
         Morris.Donut({
-            element: 'ejerciciosC',
-            data: [
+            element: 'ejerciciosC'
+            , data: [
                 {
-                    label: "Ejercicio Completados",
-                    value: 5
-                },
-                {
-                    label: "Ejercicios no Completados",
-                    value: 18
+                    label: "Ejercicio Completados"
+                    , value: 5
+                }
+                , {
+                    label: "Ejercicios no Completados"
+                    , value: 18
                 }
   ]
         });
