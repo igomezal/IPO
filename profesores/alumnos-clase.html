@@ -25,6 +25,13 @@
     <script type="text/javascript" src="js/dataTables.responsive.js"></script>
     <script type="text/javascript" src="js/sb-admin-2.js"></script>
     <script type="text/javascript">
+        var nameGuardado;
+        var apellidosGuardados;
+        var editar = function(){
+            nameGuardado = $('#name').val();
+            apellidosGuardados = $('#surname').val();
+            console.log(nameGuardado);
+        }
         var rem = function(){
             $('.not').html('<div id="noti" class="alert alert-danger" role="alert"> Alumno eliminado </div>');
             setTimeout(function() {
@@ -32,6 +39,8 @@
             },5000);
         }
         var chan = function(){
+            $('#Nombre').html(nameGuardado);
+            $("#Apellidos").html(apellidosGuardados);
             $('.not').html('<div id="noti" class="alert alert-success" role="alert"> Cambios realizados con éxito </div>');
             setTimeout(function() {
                 $("#noti").fadeOut(1500);
@@ -154,8 +163,8 @@
                                                     </tr>
                                                     <tr role="row" class="gradeA odd">
                                                         <td class="sorting_1">7</td>
-                                                        <td>Daniel</td>
-                                                        <td>Serrano Barbero</td>
+                                                        <td id="Nombre">Daniel</td>
+                                                        <td id="Apellidos">Serrano Barbero</td>
                                                         <td><center><a href="alumnos-concreto.html"><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></button></a>&nbsp &nbsp<button type="button" class="btn btn-default" data-toggle="modal" data-target="#editar"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>&nbsp &nbsp<button type="button" class="btn btn-default" data-toggle="modal" data-target="#eliminar"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></center></td>
                                                     </tr>
                                                     <tr role="row" class="gradeA even">
@@ -186,7 +195,7 @@
                                                                 <div class="col-md-6">
                                                                     <div class="input-group">
                                                                         <span class="input-group-addon" id="basic-addon1"> Nombre </span>
-                                                                        <input type="text" class="form-control" placeholder=Daniel aria-describedby="basic-addon1">
+                                                                        <input id="name" type="text" class="form-control" placeholder=Daniel aria-describedby="basic-addon1">
                                                                     </div>
                                                                     <br>
                                                                     <br>
@@ -203,8 +212,8 @@
                                                                 </div>
                                                                 <div class="col-md-6">
                                                                     <div class="input-group">
-                                                                        <span class="input-group-addon" id="basic-addon1"> Apellidos &nbsp </span>
-                                                                        <input type="text" class="form-control" placeholder="Serrano Barbero" aria-describedby="basic-addon1">
+                                                                        <span class="input-group-addon"> Apellidos &nbsp </span>
+                                                                        <input id="surname" type="text" class="form-control" placeholder="Serrano Barbero" aria-describedby="basic-addon1">
                                                                     </div>
                                                                     <br>
                                                                     <br>
@@ -223,7 +232,7 @@
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#seguro" data-dismiss="modal"> Aceptar </button>
+                                                            <button type="button" class="btn btn-success" onclick="editar()" data-toggle="modal" data-target="#seguro" data-dismiss="modal"> Aceptar </button>
                                                         </div>
                                                     </div>
                                                 </div>
